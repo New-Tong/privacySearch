@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: query
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.8.7:8848
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017
+      database: chunk
+    elasticsearch:
+      repositories:
+        enabled: true
+
+  datasource:
+    url: jdbc:mysql://localhost:23306/private_search?allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowPublicKeyRetrieval=true
+    username: root
+    password: DBrikq57VTmlDhS
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/*.xml
+
+server:
+  port: 19118
+
+fdfs:
+  connect-timeout: 1000
+  so-timeout: 1000
+  tracker-list: 172.17.0.3:22122
+
+logging:
+  level:
+    org.springframework.data.mongodb: DEBUG

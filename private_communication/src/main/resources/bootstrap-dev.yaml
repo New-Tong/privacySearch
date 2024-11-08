@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: communication
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.8.7:8848
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017
+      database: chunk
+
+
+  datasource:
+    url: jdbc:mysql://localhost:33061/private_search?allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowPublicKeyRetrieval=true
+    username: root
+    password: hellohongbin!
+    driver-class-name: com.mysql.cj.jdbc.Driver
+tcp:
+  cert:
+    center:
+      port: 50005
+      host: 127.0.0.1
+    local:
+      port: 50004
+      host: 127.0.0.1
+  split:
+    port: 40011
+server:
+  port: 19221
+
+version:
+  number: 2

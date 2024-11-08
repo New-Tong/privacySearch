@@ -1,0 +1,55 @@
+table-config:
+  tables:
+  - real_table_name: orita
+  - split_tables:
+    - split_table_name: relation
+      columns:
+      - name: sid
+        type: bigint
+        length: 20
+    - split_table_name: sT0
+      columns:
+      - name: f_srcip
+        type: VARCHAR
+        length: 100
+    - split_table_name: sT1
+      columns:
+      - name: f_ua
+        type: VARCHAR
+        length: 100
+      - name: f_dstip
+        type: VARCHAR
+        length: 100
+      - name: f_cookie
+        type: VARCHAR
+        length: 100
+    - split_table_name: sT2
+      columns:
+      - name: f_ref
+        type: VARCHAR
+        length: 100
+      - name: f_url
+        type: VARCHAR
+        length: 100
+      - name: f_ts
+        type: VARCHAR
+        length: 100
+      - name: f_ad
+        type: VARCHAR
+        length: 100
+    - split_table_name: sT3
+      columns:
+      - name: f_dataid
+        type: VARCHAR
+        length: 100
+      - name: f_json
+        type: VARCHAR
+        length: 100
+      - name: f_update_time
+        type: VARCHAR
+        length: 100
+      - name: f_src_port
+        type: VARCHAR
+        length: 100
+  - split_table_prefix: sT
+  

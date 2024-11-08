@@ -1,0 +1,100 @@
+spring:
+  application:
+    name: schedule
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 172.28.72.223:8848
+        username: nacos
+        password: NUOCBB8STAckbei
+  datasource:
+    url: jdbc:mysql://172.28.72.223:23306/private_search?allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowPublicKeyRetrieval=true
+    username: root
+    password: DBrikq57VTmlDhS
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://172.31.150.61:23306/proxy_test_0?allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowPublicKeyRetrieval=true
+#    username: root
+#    password: rootpassword
+#  datasource:
+#    dynamic:
+#      primary: master
+#      datasource:
+#        master:
+#          url: jdbc:mysql://127.0.0.1:23306/private_search?allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowPublicKeyRetrieval=true
+#          username: root
+#          password: DBrikq57VTmlDhS
+#          driver-class-name: com.mysql.cj.jdbc.Driver
+#        slave:
+#          url: jdbc:mysql://172.31.150.61:13307/proxy_test_0?allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowPublicKeyRetrieval=true
+#          username: root
+#          password: root
+#          driver-class-name: com.mysql.cj.jdbc.Driver
+#      strict: false
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/*.xml
+
+server:
+  port: 19201
+
+fdfs:
+  connect-timeout: 1000
+  so-timeout: 1000
+  tracker-list: 172.17.0.3:22122
+
+gateway:
+  sign: 314d7c22-1e49-4a3a-acc0-c3e130c37060
+
+#   使用配置文件
+#拆分为两个表 user_info表和
+table-config:
+  tables:
+    - real_table_name: sada_gdpi_click #总表名字
+      relation_table_name: sada_gdpi_click_relation
+      split_tables:
+        - split_table_name: user_info
+          columns:
+            - name: srcip
+              type: VARCHAR
+              length: 100
+            - name: ad
+              type: VARCHAR
+              length: 100
+            - name: ts
+              type: BIGINT
+              length: 20
+            - name: src_port
+              type: VARCHAR
+              length: 100
+            - name: json
+              type: VARCHAR
+              length: 100
+            - name: update_time
+              type: VARCHAR
+              length: ~
+        - split_table_name: web_info
+          columns:
+            - name: url
+              type: VARCHAR
+              length: 100
+            - name: ref
+              type: VARCHAR
+              length: 100
+            - name: ua
+              type: VARCHAR
+              length: 100
+            - name: dstip
+              type: VARCHAR
+              length: 100
+            - name: cookie
+              type: VARCHAR
+              length: 100
+
+
+
+
+
+

@@ -1,0 +1,106 @@
+{
+  "table-config": {
+    "tables": [
+      {
+        "real_table_name": "sada_gdpi_click_dtl"
+      },
+      {
+        "split_tables": [
+          {
+            "split_table_name": "relation",
+            "columns": [
+              {
+                "name": "sid",
+                "type": "bigint",
+                "length": 20
+              },
+              {
+                "name": "sid0",
+                "type": "bigint",
+                "length": 20
+              },
+              {
+                "name": "sid1",
+                "type": "bigint",
+                "length": 20
+              }
+            ]
+          },
+          {
+            "split_table_name": "server0",
+            "columns": [
+              {
+                "name": "f_cookie",
+                "type": "VARCHAR",
+                "length": 100
+              },
+              {
+                "name": "f_dstip",
+                "type": "VARCHAR",
+                "length": 100
+              },
+              {
+                "name": "f_json",
+                "type": "VARCHAR",
+                "length": 100
+              },
+              {
+                "name": "f_ua",
+                "type": "VARCHAR",
+                "length": 100
+              },
+              {
+                "name": "f_src_port",
+                "type": "VARCHAR",
+                "length": 100
+              },
+              {
+                "name": "f_dataid",
+                "type": "VARCHAR",
+                "length": 100
+              },
+              {
+                "name": "f_update_time",
+                "type": "VARCHAR",
+                "length": 100
+              }
+            ]
+          },
+          {
+            "split_table_name": "server1",
+            "columns": [
+              {
+                "name": "f_ts",
+                "type": "VARCHAR",
+                "length": 100
+              },
+              {
+                "name": "f_ad",
+                "type": "VARCHAR",
+                "length": 100
+              },
+              {
+                "name": "f_srcip",
+                "type": "VARCHAR",
+                "length": 100
+              },
+              {
+                "name": "f_url",
+                "type": "VARCHAR",
+                "length": 100
+              },
+              {
+                "name": "f_ref",
+                "type": "VARCHAR",
+                "length": 100
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "split_table_prefix": "server"
+      }
+    ]
+  }
+}

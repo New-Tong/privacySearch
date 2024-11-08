@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: store
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 172.28.72.225:8848
+        username: nacos
+        password: NUOCBB8STAckbei
+  data:
+    mongodb:
+      # 其他可选配置
+      # authentication-database: admin # 如果需要指定不同的认证数据库
+      # replica-set: <replicaz`-set-name> # 如果使用副本集
+      # mysql数据库集成
+      database: chunk
+      uri: mongodb://dgut_chunk:hwFxzmbSR8lKCtc@172.28.72.225:27011/chunk
+  datasource:
+    url: jdbc:mysql://172.28.72.225:5567/private_search?allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowPublicKeyRetrieval=true
+    username: root
+    password: l84kCG5KP4uNNtRX
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+server:
+  port: 19120

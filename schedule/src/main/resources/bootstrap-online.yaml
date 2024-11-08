@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: schedule
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 172.28.72.225:8848
+        username: nacos
+        password: NUOCBB8STAckbei
+  datasource:
+#    location:
+#      jdbc-url: jdbc:mysql://localhost:23306/private_search?allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowPublicKeyRetrieval=true
+#      username: root
+#      password: DBrikq57VTmlDhS
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+    location:
+      jdbc-url: jdbc:mysql://172.28.72.225:7487/dgut?allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowPublicKeyRetrieval=true
+      username: root
+      password: l84kCG5KP4uNNtRX
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    source:
+      jdbc-url: jdbc:mysql://172.28.160.99:13306/userlog?allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowPublicKeyRetrieval=true
+      username: duser
+      password: RAkj#7853
+      driver-class-name: com.mysql.cj.jdbc.Driver
+server:
+  port: 19201
+gateway:
+  sign: 314d7c22-1e49-4a3a-acc0-c3e130c37060
+
+
+#   使用配置文件
+#拆分为两个表 user_info表和web_info表
+
+
+
+
+
+
+

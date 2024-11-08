@@ -1,0 +1,49 @@
+table-config:
+  tables:
+  - real_table_name: dataplatform_config
+  - relation_table_name: dataplatform_config_relation
+  - split_tables:
+    - split_table_name: server0
+      columns:
+      - name: srcip
+        type: VARCHAR
+        length: 100
+    - split_table_name: server1
+      columns:
+      - name: ua
+        type: VARCHAR
+        length: 100
+      - name: dstip
+        type: VARCHAR
+        length: 100
+      - name: cookie
+        type: VARCHAR
+        length: 100
+    - split_table_name: server2
+      columns:
+      - name: ref
+        type: VARCHAR
+        length: 100
+      - name: url
+        type: VARCHAR
+        length: 100
+      - name: ts
+        type: VARCHAR
+        length: 100
+      - name: ad
+        type: VARCHAR
+        length: 100
+    - split_table_name: server3
+      columns:
+      - name: dataid
+        type: VARCHAR
+        length: 100
+      - name: json
+        type: VARCHAR
+        length: 100
+      - name: update_time
+        type: VARCHAR
+        length: 100
+      - name: src_port
+        type: VARCHAR
+        length: 100

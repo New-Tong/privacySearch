@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: split
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 172.28.72.225:8848
+        username: nacos
+        password: NUOCBB8STAckbei
+  data:
+    mongodb:
+      uri: mongodb://dgut_chunk:hwFxzmbSR8lKCtc@172.28.72.225:27011/chunk
+      database: chunk
+
+
+
+  datasource:
+    url: jdbc:mysql://172.28.72.225:7487/private_search?allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowPublicKeyRetrieval=true
+    username: root
+    password: l84kCG5KP4uNNtRX
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/*.xml
+
+server:
+  port: 19119
+
+fdfs:
+  connect-timeout: 1000
+  so-timeout: 1000
+  tracker-list: 172.28.72.225:22122
+
+gateway:
+  sign: 314d7c22-1e49-4a3a-acc0-c3e130c37060
+
+

@@ -1,0 +1,6 @@
+version: '1'
+services:
+  web:
+    image:
+    ports:
+      - "9221:9221"

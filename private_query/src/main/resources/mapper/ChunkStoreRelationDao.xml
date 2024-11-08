@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dg.query.dao.ChunkStoreRelationDao">
+
+    <select id="selectStoreByDataNo" resultType="com.dg.query.dto.resp.FindStoreResponse">
+        select * from chunk_store_relation as csr
+        left join chunk_info  as ci on csr.chunk_info_no = ci.chunk_info_no
+        where store_info_no = #{storeNo}
+    </select>
+</mapper>
